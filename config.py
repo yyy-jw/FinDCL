@@ -10,8 +10,8 @@ class Config():
         self.test_data_path = "./dataset/" + self.dataset + "/" + self.dataset + "_test.csv"
         self.k_list_path = "./dataset/" + self.dataset + "/" + self.dataset + "_k_list.txt"
         self.k_fact_emb = "./dataset/" + self.dataset + "/" + self.dataset + "_" + str(self.k) + "_fact.pt"
-        self.bert_model = '/usr/gao/wangjia/bert-base-uncased'
-        self.bert_model_chinese = '/usr/gao/wangjia/chinese-bert-wwm-ext'
+        self.bert_model = 'bert-base-uncased'
+        self.bert_model_chinese = '/chinese-bert-wwm-ext'
         self.bert_pre_pra = './models/'+self.dataset+'_my_pre_bert_wj_1.pth'
         self.model_path = './models/' + self.dataset + '_model.pth'
         self.k_fact_model = "./models/" + str(self.k) + "_fact_model.pth"
