@@ -37,7 +37,7 @@ for index, row in tqdm(can_News.iterrows()):
 list_2_txt(Sentence_set, './pre_dataset/ori_sentences.txt')
 
 # 分词
-scnlp = StanfordCoreNLP(r'/usr/gao/wangjia/stanford-corenlp-full-2021-05-14/stanford-corenlp-4.2.2')
+scnlp = StanfordCoreNLP(r'/stanford-corenlp-full-2021-05-14/stanford-corenlp-4.2.2')
 token_dict = {}
 for i in tqdm(range(len(Sentence_set))):
     token_dict[i] = scnlp.word_tokenize(Sentence_set[i])
@@ -146,7 +146,7 @@ exaggera_dataset.to_csv("./pre_dataset/exaggera_dataset.csv", index=False)
 print("构造混淆数据集。。。")
 confusion_dataset = pd.DataFrame(columns=['old_sentence', 'new_sentence', 'modify_type'])
 
-scnlp = StanfordCoreNLP(r'/usr/gao/wangjia/stanford-corenlp-full-2021-05-14/stanford-corenlp-4.2.2')
+scnlp = StanfordCoreNLP(r'/stanford-corenlp-full-2021-05-14/stanford-corenlp-4.2.2')
 for i in tqdm(range(len(Sentence_set))):
     sentence = Sentence_set[i]
     tokens = token_dict[i]
